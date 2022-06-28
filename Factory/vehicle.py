@@ -39,11 +39,12 @@ class VehicleFactory(object):
             return Car()
         elif vehicle_type == "bike":
             return Bike()
-        else:
-            raise IllegalVehicleTypeException(f"type: {vehicle_type} is illegal vehicle type")
+        raise IllegalVehicleTypeException(f"type: {vehicle_type} is illegal vehicle type")
 
 
 if __name__ == "__main__":
     vehicle_factory = VehicleFactory()
     vehicle = vehicle_factory.create_vehicle("bike")
     vehicle.move()
+
+# reference:
